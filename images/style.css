@@ -1,0 +1,73 @@
+@charset "utf-8"
+
+body{
+	font-family: 'Antic Slab', serif;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav {
+	background: black;
+	width: 100%;
+	height: 100px;
+	line-height:100px;
+}
+
+#nav h1{
+	float: left;
+}
+
+#nav h1 a {
+	text-decoration: none;
+	color: white;
+	margin-left: 27px;
+	font-family: 'Nanum Myeongjo', serif;
+	font-size: 37px;
+}
+
+#nav ul {
+	float: right;
+}
+
+#nav ul li {
+	text-decoration: none;
+	list-style-type: none;
+	display: inline-block;
+}
+
+#nav ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 25px;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+#nav ul li :hover
+{
+	background: yellow;
+	transition: all ease-in-out 0.40s;
+	height: 50px;
+	line-height: 50px;
+	width: 60px;
+}
+
+#hello {
+	background: yellow;
+	height: 50px;
+	line-height: 50px;
+	width: 60px;
+}
+
+#jams1 {
+	background: yellow;
+	height: 5px;
+}
+
+#jams2 {
+	background: url(wdspro/lib1.jpg) no-repeat;
+	width: 100%;
+	height: 600px;
+}
