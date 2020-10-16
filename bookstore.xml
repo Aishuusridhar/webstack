@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="booklist.xsl"?>
+
+<bookstore bid="B1">
+<book>
+<no>1</no>
+<title>Percy Jackson Series</title>
+<author>Rick Riordan</author>
+<publisher>Puffin Books</publisher>
+<year>2000-2010</year>
+<price>Rs. 7000</price>
+</book>
+
+<book bid="B2">
+<no>2</no>
+<title>Harry Potter</title>
+<author>J. K. Rowling</author>
+<publisher>Bloomsbury</publisher>
+<year> 1999-2010</year>
+<price>Rs. 7000</price>
+</book>
+
+<book bid="b3">
+<no>3</no>
+<title>Chronicles of Narnia</title>
+<author>C. S. Lewis</author>
+<publisher>Harper Collins</publisher>
+<year>1990</year>
+<price>Rs.6000</price>
+</book>
+
+<book bid="b4">
+<no>4</no>
+<title>Atermis Fowl</title>
+<author>Eoin Colffer</author>
+<publisher>Puffin Books</publisher>
+<year>2000</year>
+<price>Rs.5000</price>
+</book>
+
+<book bid="B5">
+<no>5</no>
+<title>Hunger Games</title>
+<author>Suzanne Collins</author>
+<publisher>Scholastic</publisher>
+<year>2009</year>
+<price>Rs.4000</price>
+</book>
+
+</bookstore>
