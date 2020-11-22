@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Missing Library</title>
+<LINK REL="STYLESHEET" type="text/css" HREF="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="all.css">
+
+<script>
+	
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+    user = prompt("Please enter your name:", "");
+    if (user != "" && user != null) {
+      setCookie("username", user, 30);
+    }
+  }
+}
+
+
+</script>
+
+
+</HEAD>
+<BODY onload="checkCookie()">
+
+
+
+
+
+
+<div id="nav">
+<h1><a href="wdsproject.html">The Missing Library</a></h1>
+</div>
+
+<div id="nav2">
+<ul>
+<li id="jams"><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT US</a></li>
+<li><a href="bookstore.html">BOOKSTORE</a></li>
+<li><a href="events.html">EVENTS</a></li>
+<li><a href="https://aishuusridhar.github.io/webstack/bookstore.xml">MUST HAVES</a></li>
+<li><a href="form.html">ACCOUNT</a></li>
+</ul>
+</div>
+
+<div id="jams1">
+
+</div>
+
+<div>
+	<h2><a href="aboutus.html">About us</h2>
+</div>
+<div>
+	<p><a href="aboutus.html">
+
+Being a <b>Hybrid Publishing Company</b>, we provide the merits of both Self & Traditional Publishing to our Authors!<br>
+Our Team of Dedicated Professionals aims to provide a <b>Faster Service</b> to all Our Authors by publishing of their Books<br>
+ in a <b>shorter span of time</b>, which gives the Authors, the opportunity to make an early & desired release their Books.<br>
+We have a Philosophy that it's the <b>efforts of the Committed Authors</b>, which builds up a Publishing Company.<br> 
+Therefore, we make sure to pay the favor back to Our Authors by placing their Books at the <b>maximum number of <br>
+Physical Bookstores</b> across the country!</p>
+
+</div>
+
+<h6><a href="howto.html"><b>How to submit your Manuscript</b></h6><br>
+<ol type="1"><a href="howto.html">
+	
+	<li>Assemble your MANUSCRIPT in one single MS WORD File.</li>
+	
+	<li>Email us your complete manuscript at our official email address:<br>
+    <b> puffinspublishers@gmail.com</b> & mention the subject of your
+		email <br> as “Manuscript Submission” while sending us your script.</li>
+	
+	<li>Our Team will contact you within 12 Hours & you’ll be further <br>
+		guided by Our Professionals in the publishing process.</li>
+	
+	<li>We’ll remain in touch with all Our Authors, before and  after <br> 
+	    the completion of Publishing Process.</li>
+</ol>
+
+
+<footer>
+	
+	<div class="footer-list-icons">
+		
+			<a class="ig" href="#"><i class="fab fa-instagram"></i></a>
+			<a class="twit" href="#"><i class="fab fa-twitter"></i></a>
+			<a class="face" href="#"><i class="fab fa-facebook-f"></i></a>
+			<a class="gp" href="#"><i class="fab fa-google-plus-g"></i></a>
+		
+
+	</div>
+
+</footer>
+
+
+
+</body>
+</html>
