@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+		body {
+			background-image: url(bsbg5.jpg);
+			height: 100vh;
+			background-size: cover;
+			background-position: center;
+		}
+		
+		.form {
+			font-size: 10px;
+			alighn-items: center;
+		}
+		
+	</style>
 </head>
 <body>
-	<form name="bank" onsubmit="return validateform()" method="post">
+	<container class="box">
+	<form class="form" name="bank" onsubmit="return validateform()" method="post">
 		<h2>Register</h2>
 		Account Id : <input id="accountid" name="Account Id"><br><br>
 		Name : <input type="text" input id="name"><br><br>
@@ -14,6 +29,7 @@
 		Username : <input id="user"><br><br>
 		<button onclick="register()">REGISTER</button>
 	</form>
+	</container>
 
 
 
