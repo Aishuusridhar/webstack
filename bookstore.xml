@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
-<bookstore>
+<bookstore bid=1>
 <book>
 <no>1</no>
 <title>Percy Jackson Series</title>
@@ -11,7 +11,7 @@
 <price>500</price>
 </book>
 
-<book>
+<book bid=2>
 <no>2</no>
 <title>Harry Potter</title>
 <author>J. K. Rowling</author>
@@ -20,7 +20,7 @@
 <price>7000</price>
 </book>
 
-<book>
+<book bid=3>
 <no>3</no>
 <title>Chronicles of Narnia</title>
 <author>C. S. Lewis</author>
@@ -29,7 +29,7 @@
 <price>6000</price>
 </book>
 
-<book>
+<book bid=4>
 <no>4</no>
 <title>Atermis Fowl</title>
 <author>Eoin Colffer</author>
@@ -38,7 +38,7 @@
 <price>5000</price>
 </book>
 
-<book>
+<book bid=5>
 <no>5</no>
 <title>Hunger Games</title>
 <author>Suzanne Collins</author>
