@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>The Missing Library</title>
+	<LINK REL="STYLESHEET" type="text/css" HREF="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="all.css">
+
+<style>
+
+body {
+			background: url("bsbg3.jpg");
+			height: 100vh;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		
+		.btn {
+			font-family: "Roboto", Sans serif;
+			text-transform: uppercase;
+			outline: 0;
+			background: #4caf50;
+			width: 30%;
+			border: 0;
+			padding: 15px;
+			color: #ffffff;
+			font-size: 14px;
+			cursor: pointer;
+}
+
+h1 {
+			font-family: "Roboto", Sans serif;
+			color: #ffffff;
+			border: black;
+			
+		}
+
+.dom {
+	text-align: center;
+			position: relative;
+			z-index: 1;
+			background-color: black;
+			max-width: 600px;
+			margin: 0 auto 100px;
+			padding: 45px;
+			opacity: 80%;
+			padding-top: 70px;
+}
+
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+  background-color: black;
+  opacity: 95%;
+}
+th,td {
+  
+  font-family: "Roboto", Sans serif;
+			outline: 1;
+			width: 100%;
+			border: 0;
+			margin: 0 0 15px;
+			padding: 15px;
+			box-sizing: border-box;
+			font-size: 14px; 
+			color: white;
+}
+
+footer {
+	height: 200px;
+	background: #000;
+	padding: 50px;
+	text-align: center;
+	position: relative;
+	width: 100%;
+
+	
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div id="nav">
+<h1><a href="wdsproject.html">The Missing Library</a></h1>
+</div>
+<div id="bsbg">
+<div id="nav2">
+<ul>
+<li id="jams"><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT US</a></li>
+<li><a href="bookstore.html">BOOKSTORE</a></li>
+<li><a href="events.html">EVENTS</a></li>
+<li><a href="https://aishuusridhar.github.io/webstack/bookstore.xml">MUST HAVES</a></li>
+<li><a href="form.html">ACCOUNT</a></li>
+</ul>
+</div><br>
+
+<div class="dom">
+<h1>Get More Books on SPECIAL OFFER!</h1><br><br>
+<button class="btn" type="button" onclick="loadXMLDoc()">SPECIAL OFFER</button>
+<br><br>
+<table id="demotable"></table>
+</div><br><br>
+
+<script>
+	
+function loadXMLDoc()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4 && this.status==200)
+                {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET","specials.xml",false);
+            xhttp.send();
+        }
+        
+        function myFunction(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr><th>title</th><th>Author</th><th>publisher</th><th>price</th></tr>";
+            var x=xmlDoc.getElementsByTagName("book");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("Author")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("publisher")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("demotable").innerHTML=t;
+        }
+
+
+</script>
+
+<footer>
+	
+	<div class="footer-list-icons">
+		
+			<a class="ig" href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram"></i></a>
+			<a class="twit" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+			<a class="face" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+			<a class="gp" href="https://www.googleplus.com/"><i class="fab fa-google-plus-g"></i></a>
+		
+
+	</div>
+
+</footer>
+
+
+</body>
+</html>
