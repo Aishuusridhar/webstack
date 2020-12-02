@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+body {
+	background: url("11.jfif") no-repeat;
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	position: relative;
+	z-index: 1;
+	background-size: cover;
+}
+
+    table,th,td
+    {
+     border:1px solid black;
+     border-collapse: collapse;
+     position: relative;
+     z-index: 0;
+     margin-left: 180px;
+     opacity: 90%;
+    }
+
+
+    th,td{
+        padding: 5px;
+    }
+
+		.btn {
+			font-family: "Roboto", Sans serif;
+			text-transform: uppercase;
+			outline: 0;
+			background: #4caf50;
+			width: 30%;
+			border: 0;
+			padding: 15px;
+			color: #ffffff;
+			font-size: 14px;
+			cursor: pointer;
+			align-items: center;
+			position: relative;
+			z-index: 1;
+			margin-left: 530px;
+}
+
+
+.p {
+	text-align: center;
+	font-color: white;
+	font-family: "Roboto", Sans serif;
+	color: #ffffff;
+    font-size: 50px;
+    background: transparent;
+    margin: 0;
+    padding: 0;	
+}
+
+img {
+	max-width: 1200px;
+}
+
+
+.paras {
+	text-align: center;
+	background: black;
+	max-width: 900px;
+	margin: 0 auto 100px;
+	padding: 55px;
+	opacity: 90%;
+	padding-top: 65px;
+
+}
+
+</style>
+
+
+<meta charset="utf-8">
+<title>The Missing Library</title>
+<LINK REL="STYLESHEET" type="text/css" HREF="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="all.css">
+</head>
+
+<body>
+<div id="nav">
+<h1><a href="wdsproject.html">The Missing Library</a></h1>
+</div>
+
+<div id="nav2">
+<ul>
+<li id="jams"><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT US</a></li>
+<li><a href="bookstore.html">BOOKSTORE</a></li>
+<li><a href="events.html">EVENTS</a></li>
+<li><a href="https://aishuusridhar.github.io/webstack/bookstore.xml">MUST HAVES</a></li>
+<li><a href="form.html">ACCOUNT</a></li>
+</ul>
+</div>
+
+<div id="jams5">
+	
+</div>
+
+<select id="democolor" onchange="show()">
+        <option value="Select Color">Select Color</option>
+        <option value="White">Plain</option>
+        <option value="green">Green</option>
+        <option value="purple">Purple</option>
+    </select>
+   
+
+<script>
+	
+
+
+function show()
+        {
+            var value=document.getElementById("democolor").value;
+            if(value!="Select Color")
+            {
+                document.bgColor=value;
+                document.cookie="color="+value+";expires=Fri,1 Aug 2021 01:00:00 UTC;";
+            }
+        }
+        window.onload=function()
+        {
+            if(document.cookie.length!=0)
+            {
+                var a=document.cookie.split("=");
+                document.getElementById("democolor").value=a[1];
+                document.bgColor=a[1];
+            }
+        }
+
+
+</script>
+ <br><br>
+
+
+<p class="p">PERCY JACKSON SERIES<br><br><br>
+<img src="pjo1.jpg">
+</p>
+
+<table style="width: 75%%">
+	
+	<tr>
+		<th>S.No.</th>
+		<th>Title</th>
+		<th>Author</th>
+		<th>Year of release</th>
+	</tr>
+	<tr>
+		<td> 1 </td>
+		<td> Percy Jackson and the Lightening Thief </td>
+		<td> Rick Riordan </td>
+		<td> 28 June 2005 </td>
+	</tr>
+	<tr>
+		<td> 2 </td>
+		<td> Percy Jackson and the Sea of Monsters </td>
+		<td> Rick Riordan </td>
+		<td> 1 April 2006 </td>
+	</tr>
+	<tr>
+		<td> 3 </td>
+		<td> Percy Jackson and the Titan's Curse </td>
+		<td> Rick Riordan </td>
+		<td> 1 May 2007 </td>
+	</tr> 
+	<tr>
+		<td> 4 </td>
+		<td> Percy Jackson and the Battle of the Labyrinth </td>
+		<td> Rick Riordan </td>
+		<td> 6 May 2008 </td>
+	</tr>
+	<tr>
+		<td> 5 </td>
+		<td> Percy Jackson and the Last Olympian </td>
+		<td> Rick Riordan </td>
+		<td> 3 February 2010 </td>
+	</tr>
+<br>
+	
+</table>
+<br><br>
+
+
+<br>
+<br>
+<div id="aboutcontainer">
+
+
+</div>
+<br>
+<br>
+<br>
+
+<button class="btn" type="button"><a href="dom.html">Get more Books</a></button>
+<table id="demotable"></table>
+
+<script>
+	function loadabout(){
+		var i;
+		var html = '<div class="home-books" id="aboutblur"><h3 style="color:white; margin-left: 10px; text-align: center; font-weight: bold;">About Percy Jackson</h3>';
+		var yhttp = new XMLHttpRequest();
+		yhttp.onreadystatechange =function(){
+			if(this.readyState==4 && this.status==200) {
+				var array = eval(JSON.parse(this.responseText));
+				for(i=0;i<array.length;i++) {
+					var name = array[i].name;
+					var book = array[i].book;
+					var about = array[i].about;
+					html += '<div class="aboutbox"><p class="aboutbook">' + book + '</p><br><p class="abcontent">' + about + '</p></div>';
+				}
+				html += '</div>';
+				document.getElementById("aboutcontainer").innerHTML =html;
+			}
+		};
+		yhttp.Open("GET", "JSON/pjo.txt", true);
+		yhttp.send();
+	}
+
+</script>
+
+
+
+<br><br><br>
+
+<footer>
+	
+	<div class="footer-list-icons">
+		
+			<a class="ig" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+			<a class="twit" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+			<a class="face" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+			<a class="gp" href="#"><i class="fab fa-google-plus-g"></i></a>
+		
+
+	</div>
+
+</footer>
+
+</body>
