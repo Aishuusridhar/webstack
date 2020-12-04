@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>The Missing Library</title>
+	<LINK REL="STYLESHEET" type="text/css" HREF="style1.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="all.css">
+
+
+<style>
+
+.datebox {
+	background: white;
+	background-size: 50px;
+	padding: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<div id="nav">
+<h1><a href="wdsproject.html">The Missing Library</a></h1>
+</div>
+<div id="bsbg">
+<div id="nav2">
+<ul>
+<li id="jams"><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT US</a></li>
+<li><a href="bookstore.html">BOOKSTORE</a></li>
+<li><a href="events.html">EVENTS</a></li>
+<li><a href="https://aishuusridhar.github.io/webstack/bookstore.xml">MUST HAVES</a></li>
+<li><a href="contactus.html">CONTACT US</a></li>
+</ul>
+</div><br>
+
+<div id="center">
+
+	<div class="container1">
+		<div class="card">
+			<div class="imgev">
+				<div>
+				<div class="back1"></div>
+				<div class="front1"></div>
+				
+				</div>
+
+			</div>
+			<div class="content">
+				<div>
+				<h2>Book Signing</h2><br>
+				<p>Take a look at our previous Book Signing events and find out the next!</p><br>
+				<a href="photos1.html">More Info</a>
+			</div>
+			</div>
+			
+		</div>
+		<div class="card">
+			<div class="imgev">
+<div>
+				<div class="back2"></div>
+				<div class="front2"></div>
+				
+				</div>
+
+				
+			</div>
+			<div class="content">
+				<div>
+				<h2>Book Clubs</h2><br>
+				<p>Do you wish to join Book Clubs and geek out with people who like the same books as you?</p><br>
+				<a href="photos2.html">More Info</a>
+			    </div>
+			</div>
+			
+		</div>
+		<div class="card">
+			<div class="imgev">
+				<div>
+				<div class="back3"></div>
+				<div class="front3"></div>
+				
+				</div>
+
+				
+			</div>
+			<div class="content">
+				<div>
+				<h2>Literary competition</h2><br>
+				<p>Write your heart out and win a chance to be published!</p><br>
+				<a href="photos3">More Info</a>
+			</div>
+			</div>
+			
+		</div>
+		<div class="card">
+			<div class="imgev">
+<div>
+				<div class="back4"></div>
+				<div class="front4"></div>
+				
+				</div>
+
+				
+			</div>
+			<div class="content">
+				<div>
+				<h2>Theatre Performances</h2><br>
+				<p>Have a fun filled evening with our annual theatre performances!</p><br>
+				<a href="photos4.html">More Info</a>		
+			</div>
+		</div>
+			
+		</div>
+		
+	</div>
+</div>
+
+</div>
+<script>
+	
+function load()
+        {
+            let url=" http://time.jsontest.com ";
+            var request;
+            request=new XMLHttpRequest();
+            request.onreadystatechange=function()
+            {
+                if(request.readyState==4)
+                {
+                    var obj=JSON.parse(request.responseText);
+                    document.getElementById("date").innerHTML=obj.date;
+                    document.getElementById("time").innerHTML=obj.time;
+                }
+            };
+            request.open("GET",url,true);
+            request.send();
+        }
+
+
+</script>
+<br><br>
+
+
+<footer>
+	
+	<div class="footer-list-icons">
+		
+			<a class="ig" href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram"></i></a>
+			<a class="twit" href="#"><i class="fab fa-twitter"></i></a>
+			<a class="face" href="#"><i class="fab fa-facebook-f"></i></a>
+			<a class="gp" href="#"><i class="fab fa-google-plus-g"></i></a>
+		
+
+	</div>
+	<br><br>
+
+	<div class="datebox">
+Date:<span id="date"></span><br>
+    Time:<span id="time"></span><br>
+    <button type="button" onclick="load()">Load Information</button>
+</div>
+    
+
+</footer>
+	
+
+</body>
+</html>
