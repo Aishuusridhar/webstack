@@ -3,6 +3,9 @@ angular.module("myapp", ['ngRoute'])
          .config(function($routeProvider) {
             $routeProvider.when('/', {
                templateUrl: 'pjone.html'
+            }).when('/pjone/:first/:last', {
+               templateUrl: 'pjone.html',
+               controller:'onectrl'
             }).when('/pjtwo', {
                templateUrl: 'pjtwo.html',
                controller:'onectrl'
