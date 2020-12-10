@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html ng-app="myapp" ng-controller="mainController">
+<head>
+	<title>The Missing Library</title>
+<LINK REL="STYLESHEET" type="text/css" HREF="style1.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="all.css">
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yMg9z_E_1u_bozbGxbZTBWNexmNtGijzD1RiaZvqcZfszVg7ZYegxSWy6iVPu5W1NkDX7mYiRUfxJxjMfyqxoMQMVbqiabDF7ZqYKkaQmruUdkqOB3Rc4OyVUemUxTPm-Jge6UDYBNwHwXLVtxtpBjIteudC3kwuqMD1EAGlJfkzQ2I3fd73ks326JEJqUVzwufcNWj-PtwspJubTnTWkGIdv6Bf06-j19N2Mx80_TyKpO-EU8jNCP07rivUZw8LwT5fgdXedGZqmCV270BbDSAIjvfFFIZNGQv0Re433T1YSZwKBahXrIrSy8PVkTCtHhFXkjLvy95fKu2U0IuBHOxNB1otzB5pdjTjdBtyFpHqte6OED7jWeBsl-jiDiFU42SIh-w7OdZApwDgIg-0CPWvPN3R53pCy4wVRjwOc0C-eL8UX8hpBPLHMDyIKgt3qPbIYyj8vsk8MeoxxMPvyk0YCnHTbWk8SjysVPFHe6k4ZnASBBiXIKYNW1G1SkcqAtpos-QDQUC2d7rKj9-4O9pRFPuEKFQjLZvOOxlasBQaLZyWYfyATG6K6h0_L8ydsALoyJtWjkcV8ZQN4x0n0CFGpONkofNz3zrfYZAdQmJdi6DgFdXdNEGEDI-RVK6zWZFW3e_NsjXtfCIx2eMmB8v0NA1czclNw2RQu3hRDe6kjH3EgC-BxM_xicjVbE8oqPfRQQICGmsA0CXzLYe5Jrg0xYbl8Zc3Sy_RUKgjMfGrIW7eeCZDKLbd1tR-TNvx-avQ1fQftcM5brWHlOiJPi_uBr5aTeymp73e8ehQCH7K9U8ECjRUojr1MnvQU_0y9FqI-TCErlLILsPvPt0eBZSl5wuBMB-63ioQfnwEjyeRwIghCOOx3b5obf75hvQDV0NB9_aHeLFRcYieWOt5e8pASM9r50AALDA-x7FMpRlJzFe3RBMNQpvHosEmGM94kIY_x-cdq1ckz5LwMhkimutTBakBF83reyRdzILqHc7I42BQpEjYxXcJ816PAleuAqKcY5jY8kPxTg4L_EiN3GX3vKuyaxX-XkTkS-PA9-9l_EvUfAU-L3InIh3us1YKoL2Jfsp_8TjW4dJDjboPgemmMUNXo0iliOJ67A-eRyxAcbDzVXE0bPX-T4A7R4Rr6GWDthI2vbq1SPOvKPnYRV228ee_EK0bzJQXRkhWZM3zBPiSzsO78QkyDOeFoCRCjmKpUKLtEklXnsBvQKM08Q" nonce="66f098700706d73c0adb16ee3b2979e3" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPTAzM2M5M2IxNGMmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxNjg1NjI0MjU3MTA0NDQ4ODYxJnRoPTE3NjQ4YTU0YmQ3ZTBkNWQmdmlldz1hdHQmZGlzcD1zYWZlJnJlYWxhdHRpZD1mX2tpaHBxMHhrMCZzYWRkYmF0PUFOR2pkSi1MUkNNR3luVFE5S1VfZkxzb3BlWktOd0dsNW1nM0xqX1FzZ2wxUTF4S3R5ZFA4b2w1ekswUUdkR0I4aEFiYWdsazRWTEdjTUMzQTRsS1hGNGl4cUdQc3FwNXNZRTEyOEpvZlZiX0JHN09xQWN1WW5rZ0I0RnZZaE1tZERyR0l1RGZZQy1tYnlyNmlFZThMZlZ0ODVwdGwtUHlHMUJGT3R0TmhyTTRtb0RMZU83Y2M3MzFGaDdTZG1wRVFzaGxOWUJxX1hiU0RLTlI3SmJ3UUdDRk9SaVkyeXBLVldERTV0djNNcjVVa3ZjTEthN2VJa1dMYk1Hemo1MEtpM1VfYXYtX3ZpTmVRVHRYYmk5b0otdW9kQXdZa1N3OTdzUTZvRVJxdE9FcHV0bUE5N0U0bFd4N1FSd0p6TUN3bUs5cEszUHJsc3VBdXh3NFNUTFIydzdNdGktTEZwb1EtWU9kb3BLV1otMVl2NjFjcm1McGdLN3J4RTNIVk9fU2VIbUhOSTJVY3I2SE5IaWktZ1o0cmNWYzdaZGt0VGR3T1pDRVE0RXVmZVFkNWROTlVKcmRSZjRiT2JWLWVsT1JNUWNrY1hhV1NsNUU3M01JV1JhbnhDcDlUMVVlWTJfSThIZ3ZZSi1uMVJBMEl5aUVNbXZvaXZxYVBjdVhSQUlVZ0VmYXQ0VUs1a1BTbDVXc0JXdVpoM085Um92VTRFLXA0TVI3Uy1RdExQWXQ2SU1TOTgzLWFFZlRhMmU3U0ZaOThUZjFfNVpnbzk4V0I4R0xNUHdmQUVvNUhsbFpEN1lKYkswVHp2anlIdmxZUjRtd2hJcWRhZHRyVVNJUWFobE9QZXJNSVFBcm9MRUFFVkFRc2xaeUV4d01tWndudndBZWdTZmE5OTU0emt4ZzMxM2VhM29vRGlTal9lWkZsdUU"/>
+
+
+	<script src="angular.min.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js">
+    </script>
+    <script src="spa2.js"></script>
+    
+<title>The Missing Library</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color:blue;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background:rgb(136, 136, 230);
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color:rgb(153, 153, 250);
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h2 {
+  text-align: center;
+}
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+
+
+<body ng-app="myapp">
+<div id="nav">
+<h1><a href="wdsproject.html">The Missing Library</a></h1>
+</div>
+
+
+<div id="nav2">
+<ul>
+<li id="jams"><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT US</a></li>
+<li><a href="bookstore.html">BOOKSTORE</a></li>
+<li><a href="events.html">EVENTS</a></li>
+<li><a href="https://aishuusridhar.github.io/webstack/bookstore.xml">MUST HAVES</a></li>
+<li><a href="filter.html">THRIFT BOOKS</a></li>
+<li><a href="form.html">ACCOUNT</a></li></ul>
+</div><br>
+
+
+
+
+
+
+
+
+	<section>
+  <nav>
+    <ul><br>
+      <li><a href="#/pjone">Lightning Thief</li><br/><br/>
+      <li><a href="#/pjtwo">Sea of Monsters</a></li><br/><br/>
+      <li><a href="#/pjthree">Titan's Curse</a></li><br/><br/>
+    </ul>
+  </nav>
+  
+  <div ng-view></div>
+</section>
+<script src="spapj.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+	
+	<div class="footer-list-icons">
+		
+			<a class="ig" href="#"><i class="fab fa-instagram"></i></a>
+			<a class="twit" href="#"><i class="fab fa-twitter"></i></a>
+			<a class="face" href="#"><i class="fab fa-facebook-f"></i></a>
+			<a class="gp" href="#"><i class="fab fa-google-plus-g"></i></a>
+		
+
+	</div>
+
+</footer>
+</body>
+</html>
+
+
