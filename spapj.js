@@ -1,14 +1,16 @@
 
 angular.module("myapp", ['ngRoute'])
          .config(function($routeProvider) {
-            $routeProvider.when('/pjone', {
-               templateUrl: 'pjone.html',
+            $routeProvider.when('/', {
+               templateUrl: 'views/home.html'
+            }).when('/one', {
+               templateUrl: 'views/one.html',
                controller:'onectrl'
-            }).when('/pjtwo', {
-               templateUrl: 'pjtwo.html',
+            }).when('/one/:first/:last', {
+               templateUrl: 'views/one.html',
                controller:'onectrl'
-             }).when('/pjthree', {
-                  templateUrl: 'pjthree.html'
+             }).when('/two', {
+                  templateUrl: 'views/two.html'
             });
          })
          .controller('mainController',function($scope){
