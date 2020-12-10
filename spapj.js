@@ -6,7 +6,7 @@ angular.module("myapp", ['ngRoute'])
             }).when('/pjtwo', {
                templateUrl: 'pjtwo.html',
                controller:'onectrl'
-            }).when('/pjtwo/:first/:last', {
+            }).when('/pjtwo', {
                templateUrl: 'pjtwo.html',
                controller:'onectrl'
              }).when('/pjthree', {
